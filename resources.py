@@ -9,7 +9,7 @@ class MakeOrder(Resource):
         quantity = flask.request.form["quantity"]
         price = flask.request.form["price"]
         if product=="" or quantity=="" or price=="":
-            return {"Error":"The order is incomplete please try again"}
+            return {"Error":"Sorry your order is incomplete please try again"}
         else:
             newOrder={"product":product, "quantity":quantity, "price":price}
             return orders.makeOrder(newOrder)
